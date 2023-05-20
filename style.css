@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FADBD8 ;
+}
+
+.container{
+    width: 400px;
+    min-height: 500px;
+    background-color: #F5B7B1;
+    border-radius: 10px;
+    
+    box-sizing: border-box;
+    border: 0.5px solid;
+}
+
+.container .top{
+    width: 100%;
+    min-height: 30px;
+    /* background-color: bisque; */
+    display: flex;
+}
+
+.container .top  #data{
+    width: 75%;
+    min-height: 50px;
+    border-radius: 10px 0 0 0;
+    border: 1px solid black;
+    /* border: none; */
+}
+
+.container .top .btn{
+    width: 25%;
+    
+    /* background-color: darkgoldenrod; */
+    font-size: 20px;
+}
+
+.container .top .btn input{
+    padding: 15.85px 34px ;
+    box-sizing: border-box; 
+    font-size: 17px;
+    cursor: pointer; 
+    border-radius: 0 10px 0 0;
+    border: 1px solid #000;
+    border: none;
+    /* background-color: #2e75de; */
+    background-color: #424949;
+    color: #fff;
+}
+.container .top .btn input:hover{
+    /* color: #fff; */
+    /* background-color: blueviolet; */
+    background-color: #17202A  ;
+    color: #fff;
+}
+input[type="text"]{
+    font-size: 16px;
+    padding-left: 10px;
+    
+}
+
+.List{
+    height: 500px;
+    overflow: scroll;
+}
+
+.container .todo_list{
+    width: 100%;
+    min-height: 50px;
+    /* background-color: #FDBEEA; */
+    background-color: #E5E7E9;
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* color: #fff; */
+    color: #000;
+}
+
+.container .todo_list:nth-child(odd){
+    /* background-color: #F48798; */
+    background-color: #fff;
+    color: #000;
+}
+
+.container .todo_list p{
+    padding-left: 20px;
+}
+
+
+.container .todo_list .clear{
+    position: absolute;
+    right: -50px;
+    width: 50px;
+    min-height: 50px;
+    /* background-color: red; */
+    background-image: url(delete.png);
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.container .todo_list button{
+    border: none;
+    cursor: pointer;
+}
+.container .todo_list:hover .clear{
+    right: 0;
+    animation: myAnim 1s ease 0s 1 normal forwards;
+}
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    padding: 10px;
+}
+
+h2 img{
+    width: 50px;
+    padding-right: 10px;
+}
+
+
+@media screen and (max-width:800px) {
+    .container{
+        width: 350px;
+    }
+    .container .top .btn input{
+        padding: 20px 27px;
+    }
+}
