@@ -112,13 +112,17 @@ input[type="text"]{
     background-size: 30px;
     background-position: center;
     background-repeat: no-repeat;
-    overflow:hidden;
+    overflow:hidden ; 
+	display:none;
+	 
+	
 }
 .container .todo_list button{
     border: none;
     cursor: pointer;
 }
 .container .todo_list:hover .clear{
+	display:block;
     right: 0;
     animation: myAnim 1s ease 0s 1 normal forwards;
 }
